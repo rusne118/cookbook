@@ -8,9 +8,7 @@
               <h1 class="header"> Breakfast</h1>
             {% for meals in meals %}
             {% if meals.category_name == "breakfast" %}
-            
             <div class="col s12 m4">
-              
                 <div class="card">
                     <div class="card-image">
                          <img src="{{ meals.image }}">
@@ -21,7 +19,6 @@
                         <p>{{ meals.overview }}</p>
                     </div>
                 </div>
-                
             </div>
             {% endif %}
             {% endfor %}
