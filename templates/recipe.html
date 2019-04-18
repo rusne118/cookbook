@@ -2,7 +2,8 @@
 {% block titleimage %}
 <div class="col s12">
     <div class="icon-block">
-        <h2 class="orange-text text-lighten-3 header">{{meals.dish_name}}</h2>
+        <h2 class="header">{{meals.dish_name}}</h2>
+        <img class="img" src="{{ meals.image }}">
     </div>
 </div>
 {% endblock %}
