@@ -1,0 +1,68 @@
+{% extends 'base.html'%} 
+{% block titleimage %}
+<div class="col s12">
+    <div class="icon-block">
+        <h2 class="orange-text text-lighten-3 header">{{meals.dish_name}}</h2>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container row">
+    <div class="col s12 m4">
+        <h5>Ingredients :</h5>
+        <ol>
+            {% if meals.ingredient_one %}
+                <li>{{meals.ingredient_one}}</li>
+            {% endif %}
+            
+            {% if meals.ingredient_two %}
+                <li>{{meals.ingredient_two}}</li>
+            {% endif %}
+            
+            {% if meals.ingredient_three %}
+                <li>{{meals.ingredient_three}}</li>
+            {% endif %}
+            
+            {% if meals.ingredient_four %}
+                <li>{{meals.ingredient_four}}</li>
+            {% endif %}
+            
+            {% if meals.ingredient_five %}
+                <li>{{meals.ingredient_five}}</li>
+            {% endif %}
+            
+            {% if meals.ingredient_six %}
+                <li>{{meals.ingredient_six}}</li>
+            {% endif %}
+        </ol>
+    </div>
+    <div class="col s12 m4">
+        <h5>Steps :</h5>
+        <ol>
+            {% if meals.step_one %}
+                <li>{{meals.step_one}}</li>
+            {% endif %}
+            
+            {% if meals.step_two %}
+                <li>{{meals.step_two}}</li>
+            {% endif %}
+            
+            {% if meals.step_three %}
+                <li>{{meals.step_three}}</li>
+            {% endif %}
+            
+            {% if meals.step_four %}
+                <li>{{meals.step_four}}</li>
+            {% endif %}
+            
+            {% if meals.step_five %}
+                <li>{{meals.step_five}}</li>
+            {% endif %}
+            
+            {% if meals.step_six %}
+                <li>{{meals.step_six}}</li>
+            {% endif %}
+        </ol>
+    </div>
+</div>
+{% endblock %}

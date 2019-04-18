@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Margarine|Special+Elite" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+
+    <title>Cookbook</title>
+</head>
+
+<body class="container-fluid">
+    <nav>
+        <div class="nav-wrapper">
+            <a href="{{url_for('index')}}" class="title-page">Online Cookbook</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down menu">
+                {% if session.username %}
+                <li>Welcome!, {{ session.username }}!</li>
+                {% endif %}
+                <li><a href="{{url_for('breakfast')}}">Breakfast</a></li>
+                <li><a href="{{url_for('dinner')}}">Dinner</a></li>
+                <li><a href="{{url_for('dessert')}}">Dessert</a></li>
+                {% if not session.username %}
+                <li><a href="{{url_for('login')}}">Login</a></li>
+                <li><a href="{{url_for('register')}}">Sign Up here!</a></li>
+                {% else %}
+                <li><a href="{{url_for('add_recipe')}}">Add a new recipe</a></li>
+                <li><a href="{{url_for('logout')}}">Logout</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <ul class="sidenav" id="mobile-demo">
+            {% if session.username %}
+            <li>Hey there, {{ session.username }}!</li>
+            {% endif %}
+            <li><a href="{{url_for('breakfast')}}">Breakfast</a></li>
+            <li><a href="{{url_for('dinner')}}">Dinner</a></li>
+            <li><a href="{{url_for('dessert')}}">Dessert</a></li>
+            {% if not session.username %}
+            <li><a href="{{url_for('login')}}">Login</a></li>
+            <li><a href="{{url_for('register')}}">Sign Up</a></li>
+            {% else %}
+            <li><a href="{{url_for('add_recipe')}}">Add Recipe</a></li>
+            <li><a href="{{url_for('logout')}}">Logout</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    
+    <div class="container-fluid title-image">
+        {% block titleimage %}{% endblock %}
+    </div>
+    
+    <div class="container-fluid">
+        <main>{% block content %}{% endblock %}</main>
+    </div>
+    
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Cooking ideas</h5>
+                    <p class="grey-text text-lighten-4">Milestone Project 4 <br> Created by Rusne Supronaite.</p>
+               </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">You can also visit us on </h5>
+                    <ul>
+                      <li><a class="orange-text text-lighten-3" href="https://www.facebook.com/" target=_blank>Facebook</a></li>
+                      <li><a class="orange-text text-lighten-3" href="https://www.instagram.com/" target=_blank>Instagram</a></li>
+                      <li><a class="orange-text text-lighten-3" href="https://www.twitter.com/" target=_blank>Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright
+        </div>
+        </div>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+            $('.parallax').parallax();
+            $('.carousel').carousel();
+            $('.slider').slider();
+            $('select').formSelect();
+          });
+    </script>    
+    
+</body>
+</html>
