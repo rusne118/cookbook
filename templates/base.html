@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Margarine|Special+Elite" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
-
     <title>Cookbook</title>
 </head>
-
 <body class="container-fluid">
     <nav>
         <div class="nav-wrapper">
@@ -49,16 +46,12 @@
             {% endif %}
         </ul>
     </nav>
-
-    
     <div class="container-fluid title-image">
         {% block titleimage %}{% endblock %}
     </div>
-    
     <div class="container-fluid">
         <main>{% block content %}{% endblock %}</main>
     </div>
-    
     <footer class="page-footer">
         <div class="container">
             <div class="row">
@@ -82,12 +75,8 @@
         </div>
         </div>
     </footer>
-
-    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <script>
         $(document).ready(function(){
             $('.sidenav').sidenav();
