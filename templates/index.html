@@ -5,11 +5,12 @@
 <div class="section white">
     <div class="row container">
         <h1 class="header">Online Cookbook</h1>
-            <p class="grey-text text-darken-3 lighten-3">Welcome to the online cookbook!<br>This is a place where you are able to view and upload recipes crafted to your own taste!<br>
-    <br>Its simple and easy to get started, just <a class="orange-text text-lighten-3" href="{{url_for('login')}}">Login</a> or 
-    <a class="orange-text text-lighten-3" href="{{url_for('register')}}">Sign Up</a> and your ready to get started!</p>
+            <p class="intro">Welcome to the online cookbook!<br>This is a place where you are able to view and upload recipes crafted to your own taste!<br>
+    <br>Its simple and easy to get started, just <a class="red-text text-lighten-3" href="{{url_for('login')}}">Login</a> or 
+    <a class="red-text text-lighten-3" href="{{url_for('register')}}">Sign Up</a> and your ready to get started!</p>
     <h2 class="subheader"> Featured Recipes</h2>
     </div>
+    <p class="intro">Check here weekly for the newest and most popular recipes!</p>
         <div class="carousel">
             <a class="carousel-item" href="{{url_for('breakfast')}}"><img src="{{ url_for('static', filename='images/eggsontoast.jpg') }}"></a>
             <a class="carousel-item" href="{{url_for('dessert')}}"><img src="{{ url_for('static', filename='images/brownies.jpg') }}"></a>

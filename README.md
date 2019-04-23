@@ -40,12 +40,15 @@ https://www.bigoven.com/recipe/zaatar-dusted-poached-eggs-with-avocado-toast/190
 egghttps://www.bonappetit.com/recipe/bas-best-carrot-cake - carrot cake
 
 
-collage  
+collage s
 
 https://www.mygourmetconnection.com/avocado-egg-toast/ - eggs
 https://www.pinterest.co.uk/pin/84090718025788976/?lp=true - burer
 https://thestayathomechef.com/oven-baked-bbq-chicken/ - bbq
 https://kitchenswagger.com/pesto-shrimp-pasta-recipe/ - pesto
+https://www.amummytoo.co.uk/vegetarian-steak-pasta-bake/
+https://sallysbakingaddiction.com/seriously-fudgy-homemade-brownies/
+https://cafedelites.com/chicken-cucumber-avocado-salad/
 
 
 recipes: 
